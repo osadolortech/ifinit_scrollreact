@@ -11,44 +11,9 @@ import Dog from './animals/crazy_dog.jpg'
 
 const App = () =>{
 
-    // const list = document.querySelector('.image')
-
     const [page,setpage] = useState(1)
     const [ifinit,setifinit] = useState({List:[Calm,Cat,Dog]})
-    // const [photo, setphoto] = useState('')
-    // const [item,setitems] = useState([
-    //     {
-    //     id: 1,
-    //     image: Calm,
-    //     name: "Calm Cat"
-    //     },
-    //     {
-    //         id: 2,
-    //         image: Dog,
-    //         name: "Sleppy Dog"
-    //     },
-    //     {
-    //         id: 3,
-    //         image: Cat,
-    //         name: "Crazy Cat"
-    //     },
-    //     {
-    //         id: 4,
-    //         image: Piglet,
-    //         name: "Piglet"
-    //     },
-    //     {
-    //         id: 5,
-    //         image: Sloth,
-    //         name: "Sloth"
-    //     },
-    //     {
-    //         id: 6,
-    //         image: Squre,
-    //         name: "Squre"
-    //     }
-        
-    // ])
+  
 const loader = useRef(null)
 
 const menuscroll = (TINS) =>{
@@ -79,18 +44,6 @@ useEffect(()=>{
     })
 },[page])
 
-// const filter = (e) =>{
-//     const keyword = e.target.value 
-//     setphoto(keyword)
-// }
-
-// let imagesearch = item.filter(user=>{
-//     return Object.keys(user).some(key=> 
-//             user[key].toString().toLowerCase().includes(photo.toString().toLowerCase())
-//         )
-// })
-
-
     return (
         <div className="project-container">
             <header className="header">
@@ -109,10 +62,10 @@ useEffect(()=>{
                     </nav>
                 </div>
             </header>
-           {ifinit.List.map((post, index) => {
+           {ifinit.List.map((items) => {
                return(
                 <div className="scroll">
-               <img src={post} alt="animal"/>
+               <img src={items} alt="animal"/>
                {/* <h4 className="nametag">{it.name}</h4> */}
                </div>
               
